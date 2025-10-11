@@ -229,11 +229,6 @@ git commit -m "feat: add image analysis dashboard"
 
 The hook will reject commits that don't comply.
 
-
-## License
-NVIDIA AI Enterprise License (Linux) / MIT License (macOS Components)
-
-
 ## Docker Hub Instructions
 
 ### Building Docker Images
