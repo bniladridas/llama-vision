@@ -34,32 +34,6 @@ async def analyze_image(request: ImageAnalysisRequest):
 
 @app.post("/api/upload")
 async def upload_image(file: UploadFile = File(...)):
-    try:
-        payload = {
-            "model": "meta/llama-3.2-90b-vision-instruct",
-            "messages": [{
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": request.prompt},
-                    {
-                        "type": "image_url",
-                        "image_url": {"url": request.image_url}
-                    }
-                ]
-            }],
-            "max_tokens": 256
-        }
-        
-        async with httpx.AsyncClient() as client:
-            response = await client.post(LLAMA_API_URL, json=payload)
-            response.raise_for_status()
-            return response.json()
-            
-    except Exception as e:
-        return {"error": str(e)}
-
-@app.post("/api/upload")
-async def upload_image(file: UploadFile = File(...)):
     # In a real application, you would upload this to proper storage
     # For demo purposes, we'll save locally
     file_location = f"uploads/{file.filename}"
