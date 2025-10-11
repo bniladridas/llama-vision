@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   llama:
     image: nvcr.io/nim/meta/llama-3.2-90b-vision-instruct:1.1.1
@@ -12,7 +10,7 @@ services:
     shm_size: '16gb'
 
   backend:
-    image: <username>/backend:latest
+    build: ./backend
     ports:
       - "8001:8001"
     volumes:
@@ -24,13 +22,11 @@ services:
       - IMAGE_ANALYSIS_API_URL=http://image-analysis:8002/v1/analyze
 
   frontend:
-    image: <username>/frontend:latest
+    build: ./frontend
     ports:
       - "3000:3000"
     depends_on:
       - backend
-    volumes:
-      - ./frontend:/app
     environment:
       - NODE_ENV=development
       - REACT_APP_BACKEND_URL=http://localhost:8001
