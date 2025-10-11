@@ -29,6 +29,11 @@ async def root():
 
 @app.post("/api/analyze")
 async def analyze_image(request: ImageAnalysisRequest):
+    # Placeholder for actual analysis
+    return {"result": "Image analyzed successfully", "description": "Placeholder response"}
+
+@app.post("/api/upload")
+async def analyze_image(request: ImageAnalysisRequest):
     try:
         payload = {
             "model": "meta/llama-3.2-90b-vision-instruct",
@@ -71,7 +76,8 @@ async def upload_image(file: UploadFile = File(...)):
 
 @app.post("/api/image-analysis")
 async def image_analysis(request: ImageAnalysisRequest):
-    try:
+    # Placeholder for actual analysis
+    return {"result": "Image analysis completed", "data": "Placeholder response"}
         payload = {
             "model": "meta/llama-3.2-90b-vision-instruct",
             "messages": [{

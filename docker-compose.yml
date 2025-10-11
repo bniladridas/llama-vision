@@ -31,8 +31,3 @@ services:
       - NODE_ENV=development
       - REACT_APP_BACKEND_URL=http://localhost:8001
       - REACT_APP_IMAGE_ANALYSIS_API_URL=http://localhost:8002
-
-  image-analysis:
-    image: image-analysis-api:latest
-    ports:
-      - "8002:8002"
