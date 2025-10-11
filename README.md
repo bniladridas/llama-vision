@@ -3,7 +3,6 @@
 ![NGC Catalog](/frontend/public/llama-3_2-90b-vision-instruct.webp)  
 *Multi-platform AI vision system with NVIDIA GPU acceleration (Linux) and Apple Silicon optimization (macOS)*
 
----
 
 ## Platform Support
 | Feature               | Linux/NVIDIA                          | macOS                                |
@@ -13,7 +12,6 @@
 | Latency (P99)         | <500ms                                | 2-4s (CPU-dependent)                 |
 | Quantization Support  | Optional                              | Required (4-bit/8-bit recommended)   |
 
----
 
 ## Key Features
 - **Cross-Platform Architecture**: 
@@ -26,7 +24,6 @@
   - Image reasoning & captioning
   - Visual Q&A with custom prompts
 
----
 
 ## Technical Specifications
 |                         | Linux/NVIDIA           | macOS                   |
@@ -36,7 +33,6 @@
 | **Size**                | 7.66 GB (compressed)   | 4.2 GB (quantized)      |
 | **Publisher**           | NVIDIA                 | Community Maintained    |
 
----
 
 ## Project Structure
 ```
@@ -50,7 +46,6 @@ llama-vision-project/
 └── README.md
 ```
 
----
 
 ## Setup Guide
 
@@ -116,7 +111,6 @@ Access endpoints:
 - Frontend: `http://localhost:3000`
 - API Docs: `http://localhost:8001/docs`
 
----
 
 ## Platform Optimization
 
@@ -153,7 +147,6 @@ services:
               capabilities: [gpu, utility]
 ```
 
----
 
 ## Troubleshooting
 
@@ -175,7 +168,6 @@ _Solution_: Update NVIDIA drivers to ≥535.86.05:
 sudo apt-get install nvidia-driver-535
 ```
 
----
 
 ## Compliance & Security
 - **NVIDIA AI Enterprise**: Validated for Linux deployments
@@ -186,7 +178,6 @@ sudo apt-get install nvidia-driver-535
   - Signed with Apple Developer ID
   - Homebrew-compatible installation
 
----
 
 ## Contributing
 
@@ -206,7 +197,6 @@ git checkout -b feature/metal-enhancement
 - [ ] CPU Fallback: `pytest --platform=cpu`
 ```
 
----
 
 ## Conventional Commits
 
@@ -239,12 +229,10 @@ git commit -m "feat: add image analysis dashboard"
 
 The hook will reject commits that don't comply.
 
----
 
 ## License
 NVIDIA AI Enterprise License (Linux) / MIT License (macOS Components)
 
----
 
 ## Docker Hub Instructions
 
