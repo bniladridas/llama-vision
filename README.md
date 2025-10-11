@@ -123,25 +123,11 @@ Access points:
 * **Frontend:** [http://localhost:3000](http://localhost:3000)
 * **API Docs:** [http://localhost:8001/docs](http://localhost:8001/docs)
 
-## Platform Optimization
+## Development
 
-### Apple Silicon (Metal)
-
-```python
-import torch
-
-def load_model():
-    if torch.backends.mps.is_available():
-        device = torch.device("mps")
-        model = LlamaForVision.from_pretrained(
-            "llama-3.2-90b-vision",
-            device_map=device,
-            load_in_4bit=True
-        )
-    else:
-        model = load_cpu_quantized_model()
-    return model
-```
+- Backend: FastAPI with placeholder image analysis endpoints
+- Frontend: React app with file upload and display
+- Testing: Pytest for backend, Jest for frontend, Cypress for E2E
 
 ### NVIDIA GPU Acceleration
 
@@ -197,21 +183,7 @@ sudo apt-get install nvidia-driver-535
 
 ## Contributing
 
-```bash
-# For NVIDIA features
-git checkout -b feature/nvidia-optimization
-
-# For Apple Silicon features
-git checkout -b feature/metal-enhancement
-```
-
-**Test Matrix**
-
-```markdown
-- [ ] Linux: pytest --platform=nvidia
-- [ ] macOS: pytest --platform=metal
-- [ ] CPU: pytest --platform=cpu
-```
+Use conventional commits: `type: description` (e.g., `feat: add new feature`).
 
 ## Conventional Commits
 
@@ -264,14 +236,15 @@ docker compose up
 cd frontend && npm run cypress:open
 ```
 
-## Docker Hub Instructions
+## Docker
 
-**Build Images**
-
+Build images:
 ```bash
-docker build -t <username>/backend:latest ./backend
-docker build -t <username>/frontend:latest ./frontend
+docker build -t backend ./backend
+docker build -t frontend ./frontend
 ```
+
+Run with compose: `docker compose up`
 
 **Tag Images**
 
