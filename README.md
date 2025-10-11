@@ -229,6 +229,20 @@ git commit -m "feat: add image analysis dashboard"
 
 The hook will reject commits that don't comply.
 
+## Testing
+
+### Backend Unit Tests
+- Install dependencies: `pip install -r backend/requirements.txt`
+- Run tests: `pytest backend/tests/`
+
+### Frontend Unit Tests
+- Install dependencies: `cd frontend && npm install`
+- Run tests: `npm test`
+
+### E2E Tests
+- Start the app: `docker compose up`
+- Run Cypress: `cd frontend && npm run cypress:open`
+
 ## Docker Hub Instructions
 
 ### Building Docker Images
