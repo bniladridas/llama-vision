@@ -1,5 +1,7 @@
 # Llama Vision Project
 
+[![GitHub](https://img.shields.io/badge/GitHub-bniladridas/llama--vision--project-blue)](https://github.com/bniladridas/llama-vision-project)
+
 A demo AI vision application with backend API and React frontend for image analysis.
 
 ## Features
