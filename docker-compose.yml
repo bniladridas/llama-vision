@@ -1,6 +1,8 @@
+version: '3.8'
+
 services:
   llama:
-    image: nvcr.io/nim/meta/llama-3.2-90b-vision-instruct:latest
+    image: nvcr.io/nim/meta/llama-3.2-90b-vision-instruct:1.1.1
     environment:
       - NGC_API_KEY=${NGC_API_KEY}
     volumes:
