@@ -23,6 +23,10 @@ class ImageAnalysisRequest(BaseModel):
 
 LLAMA_API_URL = os.getenv("LLAMA_API_URL", "http://localhost:8000/v1/chat/completions")
 
+@app.get("/")
+async def root():
+    return {"message": "Llama Vision API"}
+
 @app.post("/api/analyze")
 async def analyze_image(request: ImageAnalysisRequest):
     try:
