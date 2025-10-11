@@ -208,6 +208,39 @@ git checkout -b feature/metal-enhancement
 
 ---
 
+## Conventional Commits
+
+This project uses conventional commit standards to maintain a clean and consistent git history.
+
+### Setup
+
+1. Copy the commit-msg hook to enable enforcement:
+   ```bash
+   cp scripts/commit-msg .git/hooks/commit-msg
+   ```
+
+2. For existing repositories, use the rewrite script to clean up commit messages:
+   ```bash
+   ./scripts/rewrite_msg.sh
+   ```
+
+### Usage
+
+Commit messages must follow these rules:
+- Start with a valid type: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`, `build`, `revert`
+- Followed by a colon: e.g., `feat: add new feature`
+- Entire first line must be lowercase
+- First line must be ≤60 characters
+
+Example:
+```bash
+git commit -m "feat: add image analysis dashboard"
+```
+
+The hook will reject commits that don't comply.
+
+---
+
 ## License
 NVIDIA AI Enterprise License (Linux) / MIT License (macOS Components)
 
