@@ -40,8 +40,14 @@ llama-vision-project/
 ├── backend/
 │   ├── app.py              # Platform-aware inference server
 │   ├── Dockerfile          # Conditional build for GPU/CPU
-│   └── ...                 
+│   ├── requirements.txt    # Python dependencies
+│   └── tests/              # Unit tests
 ├── frontend/               # React visualization dashboard
+│   ├── src/
+│   ├── cypress/            # E2E tests
+│   └── package.json
+├── scripts/                # Git hooks and utilities
+├── .github/workflows/      # CI/CD workflows
 ├── docker-compose.yml      # Hybrid deployment config
 └── README.md
 ```
