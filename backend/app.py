@@ -46,7 +46,8 @@ async def upload_image(file: UploadFile = File(...)):
             "image_url": f"http://localhost:8000/uploads/{file.filename}"
         }
     except Exception as e:
-        return {"error": str(e)}
+        print(f"Error during file upload: {e}")
+        return {"error": "An internal error occurred while uploading the file."}
 
 @app.post("/api/image-analysis")
 async def image_analysis(request: ImageAnalysisRequest):
