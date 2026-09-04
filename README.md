@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/basebin/llamavision/main/.github/assets/thumbnail.png" alt="llamavision" width="100%">
+</p>
+
 # llama/vision
 
 [![GitHub](https://img.shields.io/badge/GitHub-bniladridas%2Fllama--vision-blue)](https://github.com/bniladridas/llama-vision)
