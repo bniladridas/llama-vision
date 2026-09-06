@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://raw.githubusercontent.com/Coccinella-Labs/vision/main/.github/assets/thumbnail.png" alt="vision" width="100%">
+</p>
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/coccinella-labs/vision/main/.github/assets/thumbnail.png" alt="vision" width="100%">
 </p>
 
