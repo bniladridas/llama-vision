@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/basebin/llamavision/main/.github/assets/thumbnail.png" alt="llamavision" width="100%">
+  <img src="https://raw.githubusercontent.com/coccinella-labs/vision/main/.github/assets/thumbnail.png" alt="vision" width="100%">
 </p>
 
-# llama/vision
+# vision
 
-[![GitHub](https://img.shields.io/badge/GitHub-bniladridas%2Fllama--vision-blue)](https://github.com/bniladridas/llama-vision)
+[![GitHub](https://img.shields.io/badge/GitHub-coccinella--labs%2Fvision-blue)](https://github.com/coccinella-labs/vision)
 
 A containerized AI vision demo with a FastAPI backend and React frontend for image analysis.
 
@@ -45,8 +45,8 @@ llama-vision/
 ### Installation
 
 ```bash
-git clone https://github.com/bniladridas/llama-vision.git
-cd llama-vision
+git clone https://github.com/coccinella-labs/vision.git
+cd vision
 docker compose up --build
 ```
 
